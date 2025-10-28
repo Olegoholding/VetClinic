@@ -23,7 +23,7 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock x:Name="ToMainWindow" Cursor="Hand" MouseDown="ToMainWindow_MouseDown" Text="Вернуться на главную" Foreground="{StaticResource Button}" TextDecorations="Underline" VerticalAlignment="Center" FontSize="20" Margin="15,0,0,0"/>
+                    <TextBlock x:Name="ToMainWindow" Cursor="Hand" MouseDown="ToMainWindow_MouseDown" Text="&lt;&lt;&lt;&lt;&lt;" Foreground="{StaticResource Button}" TextDecorations="Underline" VerticalAlignment="Center" FontSize="20" Margin="15,0,0,0"/>
                     <Border Width="1" Background="{StaticResource Button}" Margin="40,0,0,0" HorizontalAlignment="Right"/>
                 </StackPanel>
 
@@ -32,7 +32,7 @@
             </Grid>
         </Border>
 
-        <DataGrid Grid.Row="1"/>
+        <DataGrid Name="DataGrid" Grid.Row="1"/>
 
         <Grid Grid.Row="2">
 
@@ -41,16 +41,16 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBox Margin="15" VerticalAlignment="Top" FontSize="28" Height="50"/>
+            <TextBox Name="SrcBox" Margin="15,15,180,0" VerticalAlignment="Top" FontSize="28" Height="50" Grid.ColumnSpan="2"/>
 
-            <Button VerticalAlignment="Bottom" Margin="15" Height="50">
-                <TextBlock Text="Поиск" Foreground="{StaticResource Accent}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold"/>
+            <Button Name="SrcBtn" Click="SrcBtn_Click" VerticalAlignment="Bottom" Margin="15,0,180,15" Height="50" Grid.ColumnSpan="2">
+                <TextBlock Name="TexxtBox" Text="Поиск" Foreground="{StaticResource Accent}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold"/>
             </Button>
 
-            <Button Grid.Column="1" VerticalAlignment="Top" Margin="15" Height="50">
+            <Button Name="AddBtn" Click="AddBtn_Click" Grid.Column="1" VerticalAlignment="Top" Margin="240,15,15,0" Height="50">
                 <TextBlock Text="Добавить" Foreground="{StaticResource Accent}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold"/>
             </Button>
-            <Button Grid.Column="1" VerticalAlignment="Bottom" Margin="15" Height="50">
+            <Button Name="DltBtn" Click="DltBtn_Click" Grid.Column="1" VerticalAlignment="Bottom" Margin="240,0,15,15" Height="50">
                 <TextBlock Text="Удалить" Foreground="{StaticResource Accent}" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold"/>
             </Button>
         </Grid>

@@ -1,33 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace VetClinic
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
+            CurrentTime.Text = DateTime.UtcNow.ToString();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new DataPage("Вкладка"));
-        
-
+        private void Button_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new DataPage(((Button)sender).Tag.ToString(), ((Button)sender).Tag.ToString(), ((Button)sender).Uid, $"Select * From {((Button)sender).Tag.ToString()}_view"));
         private void ThemeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e) =>
            Application.Current.Resources["Current"] = (ThemeComboBox.SelectedIndex == 0) ?
            (SolidColorBrush)Application.Current.Resources["LightTheme"] :
