@@ -10,7 +10,7 @@ namespace VetClinic
         public MainWindow()
         {
             InitializeComponent();
-            CurrentTime.Text = DateTime.UtcNow.ToString();
+            CurrentTime.Text = DateTime.Now.ToString();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e) => Frame.Navigate(new DataPage(((Button)sender).Tag.ToString(), ((Button)sender).Tag.ToString(), ((Button)sender).Uid, $"Select * From {((Button)sender).Tag.ToString()}_view"));
