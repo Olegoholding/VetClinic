@@ -9,20 +9,19 @@
     <Grid Background="{DynamicResource Current}">
         <Grid.RowDefinitions>
             <RowDefinition Height="180"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Border Background="{StaticResource Accent}">
-            <TextBlock Width="350" TextAlignment="Center" Text="Аптечный киоск" FontSize="48" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Width="250" TextAlignment="Center" Text="Аптечный киоск" FontSize="48" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Foreground="White"/>
+                <TextBlock TextAlignment="Center" Text="+" FontSize="120" VerticalAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Foreground="White" Margin="30,0,0,30"/>
+            </StackPanel>
         </Border>
 
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <WrapPanel>
+        <Grid Grid.Row="2">
+            <WrapPanel HorizontalAlignment="Center">
                 <Button Click="Button_Click" Tag="ЖурналПосещений" Uid="Номер" Margin="15" Width="200" Height="200">
                     <StackPanel>
                         <Viewbox Stretch="Uniform" Height="159" Width="148">
@@ -90,23 +89,27 @@
                 </Button>
             </WrapPanel>
             <Border Width="1" Background="Gray" HorizontalAlignment="Right"/>
-
-            <StackPanel Grid.Column="1">
-                <TextBlock Text="Время работы" HorizontalAlignment="Center" FontWeight="Bold" FontSize="48" Margin="0,15,0,0"/>
-                <TextBlock Text="8:00 - 18:00" HorizontalAlignment="Center" FontSize="48" Margin="0,15,0,0"/>
-                <Border Height="1" Width="400" Background="Gray" Margin="0,15,0,0" />
-
-                <TextBlock Text="Текущее время" HorizontalAlignment="Center" FontWeight="Bold" FontSize="48" Margin="0,15,0,0"/>
-                <TextBlock x:Name="CurrentTime" Text="CurrentTime" HorizontalAlignment="Center" FontSize="48" Margin="0,15,0,0"/>
-            </StackPanel>
         </Grid>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Margin="0,0,0,40">
+            <StackPanel>
+                <TextBlock Text="Время работы" HorizontalAlignment="Center" FontWeight="Bold" FontSize="28" Margin="0,15,0,0"/>
+                <TextBlock Text="8:00 - 18:00" HorizontalAlignment="Center" FontSize="28" Margin="0,15,0,0"/>
+            </StackPanel>
+            <Border  Width="1" Background="Gray" Margin="30,15,30,0" />
+            <StackPanel>
+                <TextBlock Text="Текущее время" HorizontalAlignment="Center" FontWeight="Bold" FontSize="28" Margin="0,15,0,0"/>
+                <TextBlock x:Name="CurrentTime" Text="CurrentTime" HorizontalAlignment="Center" FontSize="28" Margin="0,15,0,0"/>
+            </StackPanel>
+
+        </StackPanel>
 
         <ComboBox Name="ThemeComboBox" SelectionChanged="ThemeComboBox_SelectionChanged" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="20">
             <ComboBoxItem Content="Светлая"/>
             <ComboBoxItem Content="Тёмная"/>
         </ComboBox>
 
-        <Frame x:Name="Frame" Grid.RowSpan="2" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Frame" Grid.RowSpan="3" NavigationUIVisibility="Hidden"/>
         
     </Grid>
 </Window>

@@ -4,12 +4,12 @@
              xmlns:local="clr-namespace:VetClinic"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <SolidColorBrush x:Key="Accent" Color="#7dc4ff"/>
-        <SolidColorBrush x:Key="DarkTheme" Color="#48779e"/>
+        <SolidColorBrush x:Key="Accent" Color="#00796b"/>
+        <SolidColorBrush x:Key="DarkTheme" Color="#78d1c6"/>
         <SolidColorBrush x:Key="LightTheme" Color="White"/>
         <SolidColorBrush x:Key="Current" Color="White"/>
         <SolidColorBrush x:Key="Button" Color="White"/>
-        <SolidColorBrush x:Key="MouseEnter" Color="#FFCAE7FF"/>
+        <SolidColorBrush x:Key="MouseEnter" Color="#78d1c6"/>
 
         <Style TargetType="{x:Type Button}">
             <Setter Property="Template">
