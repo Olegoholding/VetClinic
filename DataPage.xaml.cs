@@ -15,7 +15,7 @@ namespace VetClinic
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataAdapter adapter;
-        readonly string connStr = "Server = 95.183.12.18; Port = 3306; Database = veterenarka; user = oleg";
+        readonly string connStr = "Server = 95.183.12.18; Port = 3306; Database = Vet; user = user";
         public DataPage(string pageName, string tag, string uid, string command)
         {
             InitializeComponent();

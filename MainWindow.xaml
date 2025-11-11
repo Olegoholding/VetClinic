@@ -22,7 +22,7 @@
 
         <Grid Grid.Row="2">
             <WrapPanel HorizontalAlignment="Center">
-                <Button Click="Button_Click" Tag="ЖурналПосещений" Uid="Номер" Margin="15" Width="200" Height="200">
+                <Button Click="Button_Click" Tag="Продажи" Uid="Номер" Margin="15" Width="200" Height="200">
                     <StackPanel>
                         <Viewbox Stretch="Uniform" Height="159" Width="148">
                             <Canvas Width="18" Height="18">
@@ -42,7 +42,7 @@
                         <TextBlock Text="Журнал продаж" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button Click="Button_Click" Tag="СписокЖивотных" Uid="Кличка" Margin="15" Width="200" Height="200">
+                <Button Click="Button_Click" Tag="Работники" Uid="Фамилия" Margin="15" Width="200" Height="200">
                     <StackPanel>
                         <Viewbox Stretch="Uniform" Height="159" Width="148">
                             <Canvas Width="20" Height="20">
@@ -57,7 +57,7 @@
                         <TextBlock Text="Работники аптеки" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button Click="Button_Click" Tag="СписокБолезнией" Uid="Название" Margin="15" Width="200" Height="200">
+                <Button Click="Button_Click" Tag="Номенклатура" Uid="Название" Margin="15" Width="200" Height="200">
                     <StackPanel>
                         <Viewbox Stretch="Uniform" Height="159" Width="148">
                             <Canvas Width="18" Height="18">
@@ -72,7 +72,7 @@
                         <TextBlock Text="Лекарства" FontSize="20" HorizontalAlignment="Center" Margin="0,5,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button Click="Button_Click" Tag="СписокХозяев" Uid="Фамилия" Margin="15" Width="200" Height="200">
+                <Button Click="Button_Click" Tag="Покупатели" Uid="Фамилия" Margin="15" Width="200" Height="200">
                     <StackPanel>
                         <Viewbox Stretch="Uniform" Height="159" Width="148">
                             <Canvas Width="18" Height="18">
